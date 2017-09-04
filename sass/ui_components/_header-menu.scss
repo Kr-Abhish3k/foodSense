@@ -1,5 +1,9 @@
 .header{
 	padding: 70px 0 15px;
+	
+	@include respond-to(tablet){
+		padding: 20px 0;
+	}
 
 	.header__image{
 		background: url("../images/food-sense.png") no-repeat; background-position: left bottom; background-size: 120px;
@@ -7,10 +11,15 @@
 		width: 120px;
 		margin: 0 auto;
 	
+		@include respond-to(tablet){
+			margin-left: 20px;
+		}
 		&:hover{
 			opacity: 0.8;
 		}
 	}
+
+	
 
 }
 
@@ -19,6 +28,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		
+		@include respond-to(tablet){
+			border: none;
+			top: 55px;
+			left: 155px;
+		}
 
 		.menu{
 			padding: 0px;

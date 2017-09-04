@@ -444,6 +444,9 @@ body {
   width: 320px;
   height: 100%;
   margin: 0 auto; }
+  @media screen and (min-width: 481px) and (max-width: 760px) {
+    body {
+      width: 480px; } }
 
 a:hover,
 a:active {
@@ -454,6 +457,9 @@ a:active {
 /*ui components*/
 .header {
   padding: 70px 0 15px; }
+  @media screen and (min-width: 481px) and (max-width: 760px) {
+    .header {
+      padding: 20px 0; } }
   .header .header__image {
     background: url("../images/food-sense.png") no-repeat;
     background-position: left bottom;
@@ -461,6 +467,9 @@ a:active {
     height: 120px;
     width: 120px;
     margin: 0 auto; }
+    @media screen and (min-width: 481px) and (max-width: 760px) {
+      .header .header__image {
+        margin-left: 20px; } }
     .header .header__image:hover {
       opacity: 0.8; }
 
@@ -469,6 +478,11 @@ a:active {
   position: absolute;
   top: 0;
   left: 0; }
+  @media screen and (min-width: 481px) and (max-width: 760px) {
+    .header__menu {
+      border: none;
+      top: 55px;
+      left: 155px; } }
   .header__menu .menu {
     padding: 0px; }
     .header__menu .menu:before, .header__menu .menu:after {
@@ -547,7 +561,11 @@ a:active {
     font-size: 0.8125rem;
     padding: 3px 5px;
     outline: 0;
-    margin-left: 15px; }
+    margin-left: 15px;
+    height: 25px; }
+    @media screen and (min-width: 481px) and (max-width: 760px) {
+      .newsletter .newsletter_mailId {
+        width: 300px; } }
   .newsletter .newsletter__subscribe {
     border: 1px solid;
     border-color: #ddd #bbb #999;
@@ -555,15 +573,36 @@ a:active {
     border-radius: 5px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
     outline: 0;
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif; }
 
 .recent {
   margin: 20px; }
+  @media screen and (min-width: 481px) and (max-width: 760px) {
+    .recent {
+      margin: 12px 10px; }
+      .recent:before, .recent:after {
+        content: "";
+        display: table; }
+      .recent:after {
+        clear: both; } }
   .recent .recent__article {
-    margin-bottom: 25px; }
+    margin-bottom: 20px; }
+    @media screen and (min-width: 481px) and (max-width: 760px) {
+      .recent .recent__article {
+        width: 220px;
+        float: left; }
+        .recent .recent__article:nth-child(even) {
+          margin-left: 10px; }
+        .recent .recent__article:nth-child(odd) {
+          margin-right: 10px; } }
     .recent .recent__article a img {
       border: 1px solid #E5E5E5;
-      padding: 10px; }
+      padding: 10px;
+      width: 100%; }
     .recent .recent__article a:hover {
       opacity: 0.8; }
     .recent .recent__article a h1 {
@@ -577,8 +616,8 @@ a:active {
     .recent .recent__article p {
       font-family: ff-tisa-web-pro, Georgia, sans-serif;
       line-height: 1.4em;
-      font-size: 14px;
-      font-size: 0.875rem;
+      font-size: 15px;
+      font-size: 0.9375rem;
       color: #111; }
     .recent .recent__article .recent__article__MoreInfo {
       margin-top: 10px;

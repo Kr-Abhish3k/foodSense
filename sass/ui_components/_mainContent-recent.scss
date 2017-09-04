@@ -1,11 +1,33 @@
 .recent{
 	margin: 20px;
+	@include respond-to(tablet){
+		margin: 12px 10px;
+		@include clearfix;
+
+		
+	}
+
+
 	.recent__article{
-			margin-bottom: 25px;
+		@include respond-to(tablet){
+			width: 220px;
+			float: left;
+			&:nth-child(even){
+			margin-left: 10px;
+			}
+
+			&:nth-child(odd){
+				margin-right: 10px;
+			}
+			
+		}
+
+			margin-bottom: 20px;
 		a{
 			img{
 				border: 1px solid $border;
 				padding: 10px;
+				width: 100%;
 			}
 			&:hover{
 				opacity: 0.8;
@@ -19,7 +41,7 @@
 		p{
 			font-family: $font-featuredElement;
 			line-height: 1.4em;
-			@include font-size($size14);
+			@include font-size($size15);
 			color: $BLACK;
 		}
 

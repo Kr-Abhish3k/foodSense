@@ -1,7 +1,7 @@
-@mixin fontStyle($size){
+@mixin fontStyle($size,$font-family:$font-featuredElement){
 	@include font-size($size);
 	color: $linkText;
-	font-family: $font-featuredElement;
+	font-family: $font-family;
 	&:hover{
 		color: $onHover;
 	}

@@ -1,15 +1,23 @@
-@mixin _respond-to($type){
+@mixin respond-to($type){
 
 	// Device ranges
-    $device-range-smartphone: 320px;
-    $device-range-tablet: 600px;
+    $device-range-smartphone: 480px;
+    $device-range-tablet: 760px;
     $device-range-ipad: 768px;
     $device-range-laptop: 1025px; 
 
 
-    @if $type == smartphone{}
+    @if $type == smartphone{
+    	@media screen and (min-width:1px) and (max-width:$device-range-smartphone){
+    		@content;
+    	}
+    }
 
-    @if $type == tablet{}
+    @if $type == tablet{
+    	@media screen and (min-width:$device-range-smartphone+1) and (max-width:$device-range-tablet){
+    		@content;
+    	}
+    }
 
     @if $type == ipad{}
 

@@ -63,6 +63,11 @@
 		padding: 3px 5px;
 		outline: 0;
 		margin-left: 15px;
+		height: 25px;
+
+		@include respond-to(tablet){
+			width: 300px;
+		}
 	}
 
 	.newsletter__subscribe{
@@ -73,5 +78,9 @@
 		background: -webkit-gradient(linear, left top, left bottom,color-stop(0, #fff), color-stop(1, #ddd));
 		outline: 0;
 		margin-left: 10px;
+		font-weight: bold;
+		@include font-size($size12);
+		font-family: $font-button;
+		
 	}
 }

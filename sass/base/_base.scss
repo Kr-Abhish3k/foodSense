@@ -4,6 +4,9 @@
 
 body{
 	width: 320px;
+	@include respond-to(tablet){
+		width: 480px;
+	}
 	height: 100%;
 	margin: 0 auto;
 }
