@@ -1,0 +1,22 @@
+/* set up */
+@import "setup/normalize",
+        "setup/reset",
+        "setup/variables";
+
+/* Mixins */
+@import "mixins/respond-to",
+        "mixins/clearfix",
+        "mixins/fontStyle";
+
+/* fonts and sizes*/
+@import "fonts/font-sizes";
+
+/*style*/
+@import "base/base";
+
+/*ui components*/
+@import "ui_components/header-menu",
+        "ui_components/home-page",
+        "ui_components/main-content",
+        "ui_components/mainContent-recent",
+        "ui_components/footer";

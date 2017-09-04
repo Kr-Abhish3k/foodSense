@@ -1,0 +1,8 @@
+@mixin fontStyle($size){
+	@include font-size($size);
+	color: $linkText;
+	font-family: $font-featuredElement;
+	&:hover{
+		color: $onHover;
+	}
+}

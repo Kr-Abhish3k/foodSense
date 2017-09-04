@@ -1,0 +1,36 @@
+.recent{
+	margin: 20px;
+	.recent__article{
+			margin-bottom: 25px;
+		a{
+			img{
+				border: 1px solid $border;
+				padding: 10px;
+			}
+			&:hover{
+				opacity: 0.8;
+			}
+			h1{
+				margin: 10px 0;
+				@include fontStyle($size16);
+			}
+		}
+
+		p{
+			font-family: $font-featuredElement;
+			line-height: 1.4em;
+			@include font-size($size14);
+			color: $BLACK;
+		}
+
+		.recent__article__MoreInfo{
+			margin-top: 10px;
+			color: $greyText;
+			@include font-size($size14);
+			a{
+				@include fontStyle($size14);
+				border-bottom: 1px dashed $border;
+			}
+		}
+	}
+}

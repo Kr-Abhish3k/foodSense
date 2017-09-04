@@ -1,0 +1,75 @@
+footer{
+	border-top: 1px solid $border;
+	padding-top: 20px;
+	padding-right: 10px;
+	min-height: 70px;
+	position: relative;
+
+	.footerMenu{
+		@include clearfix;
+		.menu{
+			.menu__item{
+				float: left;
+				@include fontStyle($size10);
+				border-right: 1px solid $greyText;
+				
+				a{
+					padding: 3px;	
+				}
+			}
+			.menu__item:last-child {
+				border-right: none;
+			}
+		}
+	}
+
+	.copyrightInfo{
+		@include font-size($size11);
+		color: $greyText;
+		padding-top: 5px;
+	}
+
+	.social{
+		@include clearfix;
+		position: absolute;
+		top: 15px;
+		right: 0;
+
+		.social_menu{
+			.menu__item{
+				float: left;
+				a{
+					text-indent: -1000em;
+					height: 32px;
+					width: 32px;
+					display: block;
+					opacity: 0.4;
+				
+					&:hover{
+						opacity: 1;
+					}
+				}
+
+				.twitter{
+					background: url("../images/icon-twitter.png");
+					background-repeat: no-repeat;
+					background-position: -17px 0px;
+					
+				}
+
+				.facebook{
+					background: url("../images/icon-facebook.png");
+					background-repeat: no-repeat;
+					background-position: -17px 0px;
+					
+				}
+
+				.rss{
+					background: url("../images/icon-rss.png");
+					background-repeat: no-repeat;
+					background-position: -17px 0px;
+				}
+			}
+		}
+	}
+}

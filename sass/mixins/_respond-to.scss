@@ -1,0 +1,18 @@
+@mixin _respond-to($type){
+
+	// Device ranges
+    $device-range-smartphone: 320px;
+    $device-range-tablet: 600px;
+    $device-range-ipad: 768px;
+    $device-range-laptop: 1025px; 
+
+
+    @if $type == smartphone{}
+
+    @if $type == tablet{}
+
+    @if $type == ipad{}
+
+    @if $type == laptop{}
+}
+

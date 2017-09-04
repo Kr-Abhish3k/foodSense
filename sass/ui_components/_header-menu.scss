@@ -1,0 +1,40 @@
+.header{
+	padding: 70px 0 15px;
+
+	.header__image{
+		background: url("../images/food-sense.png") no-repeat; background-position: left bottom; background-size: 120px;
+		height: 120px;
+		width: 120px;
+		margin: 0 auto;
+	
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+}
+
+.header__menu{
+		border-bottom: 1px solid $border;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.menu{
+			padding: 0px;
+			@include clearfix;
+			
+			.menu__item{ 
+			
+				list-style: none;
+				float: left;
+				padding: 16px 8px;
+
+				a{
+					@include fontStyle($size12);
+				}
+			}
+		}
+}
+
+

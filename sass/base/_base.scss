@@ -1,0 +1,16 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	width: 320px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+a:hover,
+a:active{
+	cursor: pointer;
+	text-decoration: none;
+	color: $FLAMINGO;
+}
