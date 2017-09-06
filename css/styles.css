@@ -447,6 +447,9 @@ body {
   @media screen and (min-width: 481px) and (max-width: 760px) {
     body {
       width: 480px; } }
+  @media screen and (min-width: 761px) and (max-width: 1024px) {
+    body {
+      width: 712px; } }
 
 a:hover,
 a:active {
@@ -460,7 +463,10 @@ a:active {
   @media screen and (min-width: 481px) and (max-width: 760px) {
     .header {
       padding: 20px 0; } }
-  .header .header__image {
+  @media screen and (min-width: 761px) and (max-width: 1024px) {
+    .header {
+      padding: 20px 0; } }
+  .header .header_image {
     background: url("../images/food-sense.png") no-repeat;
     background-position: left bottom;
     background-size: 120px;
@@ -468,39 +474,88 @@ a:active {
     width: 120px;
     margin: 0 auto; }
     @media screen and (min-width: 481px) and (max-width: 760px) {
-      .header .header__image {
+      .header .header_image {
         margin-left: 20px; } }
-    .header .header__image:hover {
+    @media screen and (min-width: 761px) and (max-width: 1024px) {
+      .header .header_image {
+        margin-left: 20px; } }
+    .header .header_image:hover {
       opacity: 0.8; }
 
-.header__menu {
+.header_menu {
   border-bottom: 1px solid #E5E5E5;
   position: absolute;
   top: 0;
   left: 0; }
   @media screen and (min-width: 481px) and (max-width: 760px) {
-    .header__menu {
+    .header_menu {
       border: none;
-      top: 55px;
+      top: 70px;
       left: 155px; } }
-  .header__menu .menu {
-    padding: 0px; }
-    .header__menu .menu:before, .header__menu .menu:after {
+  @media screen and (min-width: 761px) and (max-width: 1024px) {
+    .header_menu {
+      border: none;
+      top: 60px;
+      left: auto;
+      right: 0; } }
+  .header_menu .menu {
+    padding: 0px;
+    text-align: center; }
+    .header_menu .menu:before, .header_menu .menu:after {
       content: "";
       display: table; }
-    .header__menu .menu:after {
+    .header_menu .menu:after {
       clear: both; }
-    .header__menu .menu .menu__item {
+    .header_menu .menu .menu_item {
+      font-style: italic;
       list-style: none;
       float: left;
-      padding: 16px 8px; }
-      .header__menu .menu .menu__item a {
+      padding: 16px 8px 6px; }
+      @media screen and (min-width: 481px) and (max-width: 760px) {
+        .header_menu .menu .menu_item {
+          padding: 0 0 0 15px;
+          margin-bottom: 20px; } }
+      @media screen and (min-width: 761px) and (max-width: 1024px) {
+        .header_menu .menu .menu_item {
+          padding: 0 0 0 15px;
+          margin-bottom: 20px; } }
+      .header_menu .menu .menu_item a {
+        display: block;
+        height: 25px;
+        padding: 35px 15px 0 15px;
         font-size: 12px;
         font-size: 0.75rem;
         color: #34AC98;
         font-family: ff-tisa-web-pro, Georgia, sans-serif; }
-        .header__menu .menu .menu__item a:hover {
+        .header_menu .menu .menu_item a:hover {
           color: #EC6635; }
+        @media screen and (min-width: 1px) and (max-width: 480px) {
+          .header_menu .menu .menu_item a {
+            padding: 0;
+            background-image: none; } }
+        @media screen and (min-width: 481px) and (max-width: 760px) {
+          .header_menu .menu .menu_item a {
+            padding: 0;
+            background-image: none; } }
+        @media screen and (min-width: 761px) and (max-width: 1024px) {
+          .header_menu .menu .menu_item a {
+            font-size: 16px;
+            font-size: 1rem;
+            background-repeat: no-repeat;
+            background-position: 50% 0; }
+            .header_menu .menu .menu_item a:hover {
+              background-position: 50% 3px; } }
+    @media screen and (min-width: 761px) and (max-width: 1024px) {
+      .header_menu .menu .menu_item--tastemakers a {
+        background-image: url("../images/nav-tastemakers.png"); }
+      .header_menu .menu .menu_item--blog a {
+        background-image: url("../images/nav-blog.png"); }
+      .header_menu .menu .menu_item--alist a {
+        background-image: url("../images/nav-alist.png"); }
+      .header_menu .menu .menu_item--contribute a {
+        background-image: url("../images/nav-contribute.png"); }
+      .header_menu .menu .menu_item--about a {
+        background-image: url("../images/nav-about.png"); } }
 
 .pageWrapper {
   position: relative;
@@ -511,28 +566,29 @@ a:active {
   position: relative;
   margin-bottom: 60px;
   width: 100%; }
-  .featured .featured__image img {
+  .featured .featured_image img {
     width: 100%;
     height: 200px; }
-  .featured .featured__image .featured__image__text {
+  .featured .featured_image .featured_image_text {
     position: absolute;
     top: 164px;
     font-family: ff-tisa-web-pro, Georgia, sans-serif;
-    width: 100%; }
-    .featured .featured__image .featured__image__text h1 {
+    width: 100%;
+    display: block; }
+    .featured .featured_image .featured_image_text h1 {
       padding: 10px;
       font-style: italic;
       background: rgba(255, 255, 255, 0.5);
       opacity: 0.8;
       color: #111; }
-    .featured .featured__image .featured__image__text h2 {
+    .featured .featured_image .featured_image_text h2 {
       padding: 10px;
       font-style: italic;
       color: #E9E9E9;
       background: #111;
       font-size: 12px;
       font-size: 0.75rem; }
-  .featured .featured__image .featured_photoCredit {
+  .featured .featured_image .featured_photoCredit {
     font-size: 8px;
     font-size: 0.5rem;
     position: absolute;
@@ -547,7 +603,7 @@ a:active {
   background-size: 35px;
   background-position: 15px 15px;
   padding-bottom: 15px; }
-  .newsletter .newsletter__overview {
+  .newsletter .newsletter_overview {
     font-family: ff-tisa-web-pro, Georgia, sans-serif;
     line-height: 1.3em;
     font-size: 11px;
@@ -566,7 +622,7 @@ a:active {
     @media screen and (min-width: 481px) and (max-width: 760px) {
       .newsletter .newsletter_mailId {
         width: 300px; } }
-  .newsletter .newsletter__subscribe {
+  .newsletter .newsletter_subscribe {
     border: 1px solid;
     border-color: #ddd #bbb #999;
     padding: 3px 5px;
@@ -589,48 +645,48 @@ a:active {
         display: table; }
       .recent:after {
         clear: both; } }
-  .recent .recent__article {
+  .recent .recent_article {
     margin-bottom: 20px; }
     @media screen and (min-width: 481px) and (max-width: 760px) {
-      .recent .recent__article {
+      .recent .recent_article {
         width: 220px;
         float: left; }
-        .recent .recent__article:nth-child(even) {
+        .recent .recent_article:nth-child(even) {
           margin-left: 10px; }
-        .recent .recent__article:nth-child(odd) {
+        .recent .recent_article:nth-child(odd) {
           margin-right: 10px; } }
-    .recent .recent__article a img {
+    .recent .recent_article a img {
       border: 1px solid #E5E5E5;
       padding: 10px;
       width: 100%; }
-    .recent .recent__article a:hover {
+    .recent .recent_article a:hover {
       opacity: 0.8; }
-    .recent .recent__article a h1 {
+    .recent .recent_article a h1 {
       margin: 10px 0;
       font-size: 16px;
       font-size: 1rem;
       color: #34AC98;
       font-family: ff-tisa-web-pro, Georgia, sans-serif; }
-      .recent .recent__article a h1:hover {
+      .recent .recent_article a h1:hover {
         color: #EC6635; }
-    .recent .recent__article p {
+    .recent .recent_article p {
       font-family: ff-tisa-web-pro, Georgia, sans-serif;
       line-height: 1.4em;
       font-size: 15px;
       font-size: 0.9375rem;
       color: #111; }
-    .recent .recent__article .recent__article__MoreInfo {
+    .recent .recent_article .recent_article_MoreInfo {
       margin-top: 10px;
       color: #AAA;
       font-size: 14px;
       font-size: 0.875rem; }
-      .recent .recent__article .recent__article__MoreInfo a {
+      .recent .recent_article .recent_article_MoreInfo a {
         font-size: 14px;
         font-size: 0.875rem;
         color: #34AC98;
         font-family: ff-tisa-web-pro, Georgia, sans-serif;
         border-bottom: 1px dashed #E5E5E5; }
-        .recent .recent__article .recent__article__MoreInfo a:hover {
+        .recent .recent_article .recent_article_MoreInfo a:hover {
           color: #EC6635; }
 
 footer {
@@ -644,18 +700,18 @@ footer {
     display: table; }
   footer .footerMenu:after {
     clear: both; }
-  footer .footerMenu .menu .menu__item {
+  footer .footerMenu .menu .menu_item {
     float: left;
     font-size: 10px;
     font-size: 0.625rem;
     color: #34AC98;
     font-family: ff-tisa-web-pro, Georgia, sans-serif;
     border-right: 1px solid #AAA; }
-    footer .footerMenu .menu .menu__item:hover {
+    footer .footerMenu .menu .menu_item:hover {
       color: #EC6635; }
-    footer .footerMenu .menu .menu__item a {
+    footer .footerMenu .menu .menu_item a {
       padding: 3px; }
-  footer .footerMenu .menu .menu__item:last-child {
+  footer .footerMenu .menu .menu_item:last-child {
     border-right: none; }
   footer .copyrightInfo {
     font-size: 11px;
@@ -671,25 +727,25 @@ footer {
       display: table; }
     footer .social:after {
       clear: both; }
-    footer .social .social_menu .menu__item {
+    footer .social .social_menu .menu_item {
       float: left; }
-      footer .social .social_menu .menu__item a {
+      footer .social .social_menu .menu_item a {
         text-indent: -1000em;
         height: 32px;
         width: 32px;
         display: block;
         opacity: 0.4; }
-        footer .social .social_menu .menu__item a:hover {
+        footer .social .social_menu .menu_item a:hover {
           opacity: 1; }
-      footer .social .social_menu .menu__item .twitter {
+      footer .social .social_menu .menu_item .twitter {
         background: url("../images/icon-twitter.png");
         background-repeat: no-repeat;
         background-position: -17px 0px; }
-      footer .social .social_menu .menu__item .facebook {
+      footer .social .social_menu .menu_item .facebook {
         background: url("../images/icon-facebook.png");
         background-repeat: no-repeat;
         background-position: -17px 0px; }
-      footer .social .social_menu .menu__item .rss {
+      footer .social .social_menu .menu_item .rss {
         background: url("../images/icon-rss.png");
         background-repeat: no-repeat;
         background-position: -17px 0px; }

@@ -7,6 +7,9 @@ body{
 	@include respond-to(tablet){
 		width: 480px;
 	}
+	 @include respond-to(ipad){
+		width: 712px;
+	} 
 	height: 100%;
 	margin: 0 auto;
 }

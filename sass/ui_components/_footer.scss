@@ -8,7 +8,7 @@ footer{
 	.footerMenu{
 		@include clearfix;
 		.menu{
-			.menu__item{
+			.menu_item{
 				float: left;
 				@include fontStyle($size10);
 				border-right: 1px solid $greyText;
@@ -17,7 +17,7 @@ footer{
 					padding: 3px;	
 				}
 			}
-			.menu__item:last-child {
+			.menu_item:last-child {
 				border-right: none;
 			}
 		}
@@ -36,7 +36,7 @@ footer{
 		right: 0;
 
 		.social_menu{
-			.menu__item{
+			.menu_item{
 				float: left;
 				a{
 					text-indent: -1000em;

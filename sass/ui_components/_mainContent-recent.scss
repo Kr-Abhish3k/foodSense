@@ -8,7 +8,7 @@
 	}
 
 
-	.recent__article{
+	.recent_article{
 		@include respond-to(tablet){
 			width: 220px;
 			float: left;
@@ -45,7 +45,7 @@
 			color: $BLACK;
 		}
 
-		.recent__article__MoreInfo{
+		.recent_article_MoreInfo{
 			margin-top: 10px;
 			color: $greyText;
 			@include font-size($size14);

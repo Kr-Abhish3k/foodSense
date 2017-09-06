@@ -3,16 +3,17 @@
 	margin-bottom: 60px;
 	width: 100%;
 
-	.featured__image{
+	.featured_image{
 		img{
 			width: 100%;
 			height: 200px;
 		}
-		.featured__image__text{
+		.featured_image_text{
 			position: absolute;
 			top: 164px;
 			font-family: $font-featuredElement;
 			width: 100%;
+			display: block;
 			h1{
 				padding: 10px;
 				font-style: italic;
@@ -49,7 +50,7 @@
 	background-position: 15px 15px;
 	padding-bottom: 15px;
 
-	.newsletter__overview{
+	.newsletter_overview{
 		font-family: $font-featuredElement;
 		line-height: 1.3em;
 		@include font-size($size11);
@@ -70,7 +71,7 @@
 		}
 	}
 
-	.newsletter__subscribe{
+	.newsletter_subscribe{
 		border: 1px solid;
 		border-color: #ddd #bbb #999;
 		padding: 3px 5px;

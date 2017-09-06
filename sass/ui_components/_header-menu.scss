@@ -4,8 +4,13 @@
 	@include respond-to(tablet){
 		padding: 20px 0;
 	}
+	
+	@include respond-to(ipad){
+		padding: 20px 0;
+	}
+	
 
-	.header__image{
+	.header_image{
 		background: url("../images/food-sense.png") no-repeat; background-position: left bottom; background-size: 120px;
 		height: 120px;
 		width: 120px;
@@ -14,6 +19,10 @@
 		@include respond-to(tablet){
 			margin-left: 20px;
 		}
+		@include respond-to(ipad){
+			margin-left: 20px;
+		}	
+
 		&:hover{
 			opacity: 0.8;
 		}
@@ -23,7 +32,7 @@
 
 }
 
-.header__menu{
+.header_menu{
 		border-bottom: 1px solid $border;
 		position: absolute;
 		top: 0;
@@ -31,24 +40,73 @@
 		
 		@include respond-to(tablet){
 			border: none;
-			top: 55px;
+			top: 70px;
 			left: 155px;
+		}
+		@include respond-to(ipad){
+			border: none;
+			top: 60px;
+			left: auto;
+			right: 0;
 		}
 
 		.menu{
 			padding: 0px;
 			@include clearfix;
+			text-align: center;
 			
-			.menu__item{ 
-			
+			.menu_item{ 
+				font-style: italic;
 				list-style: none;
 				float: left;
-				padding: 16px 8px;
+				padding: 16px 8px 6px;
+				
+				@include respond-to(tablet){
+					padding: 0 0 0 15px;
+					margin-bottom: 20px;
+				}
+				@include respond-to(ipad){
+					padding: 0 0 0 15px;
+					margin-bottom: 20px;
+				}
 
 				a{
+					display: block;
+					height: 25px;
+					padding: 35px 15px 0 15px;
 					@include fontStyle($size12);
+
+					@include respond-to(smartphone){
+						padding: 0;
+						background-image: none;
+					}
+					@include respond-to(tablet){
+						padding: 0;
+						background-image: none;
+					}
+				    @include respond-to(ipad){
+						@include font-size($size16);						
+						 background-repeat: no-repeat;
+						 background-position: 50% 0;						
+
+						 &:hover{
+							background-position: 50% 3px;						 	
+						 }
+					 } 
+
 				}
+
+
+
 			}
+			
+			 @include respond-to(ipad){
+				.menu_item--tastemakers{a{ background-image: url("../images/nav-tastemakers.png");	}}
+				.menu_item--blog{a{ background-image: url("../images/nav-blog.png");	}}
+				.menu_item--alist{a{ background-image: url("../images/nav-alist.png");	}}
+				.menu_item--contribute{a{ background-image: url("../images/nav-contribute.png");	}}
+				.menu_item--about{a{ background-image: url("../images/nav-about.png");	}}
+			} 
 		}
 }
 
