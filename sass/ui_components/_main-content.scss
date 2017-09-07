@@ -15,9 +15,13 @@
 			position: absolute;
 			top: 164px;
 			font-family: $font-featuredElement;
-			//width: 480px;
-			display: block;
-			@include clearfix;
+			@include respond-to(smartphone){
+				width: 100%;
+			}
+			
+			@include respond-to(tablet){
+				width: 100%;
+			}
 
 			@include respond-to(ipad){
 				text-align: right;
@@ -25,18 +29,14 @@
 				}
 
 			h1{
-				float: right;
 				padding: 10px;
 				font-style: italic;
 				background: rgba(255,255,255,0.5);
 				opacity: 0.8;
 				color: $BLACK;
-				width: 320px;
-				@include respond-to(tablet){
-					width: 480px;
-				}
+		
 				@include respond-to(ipad){
-					width: 300px;
+					display: inline-block;
 				}
 			}
 
@@ -46,11 +46,6 @@
 				color: $MERCURY;
 				background: $BLACK;
 				@include font-size($size12);
-				width: 320px;
-				@include respond-to(tablet){
-					width: 480px;
-				}
-				
 			}
 		}
 		.featured_photoCredit{

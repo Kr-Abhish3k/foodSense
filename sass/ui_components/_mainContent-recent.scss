@@ -3,15 +3,31 @@
 	@include respond-to(tablet){
 		margin: 12px 10px;
 		@include clearfix;
+	}
 
-		
+	@include respond-to(ipad){
+		@include clearfix;
+		width: 100%;
+		margin: 30px 0 20px;
 	}
 
 
 	.recent_article{
+		@include respond-to(ipad){
+			float: left;
+			//width: 25%;
+			width: 160px;
+			margin-left: 24px;
+
+			&:first-child{
+				margin-left: 0px;
+			}
+		}
+
 		@include respond-to(tablet){
 			width: 220px;
 			float: left;
+			margin-bottom: 20px;
 			&:nth-child(even){
 			margin-left: 10px;
 			}
@@ -22,7 +38,7 @@
 			
 		}
 
-			margin-bottom: 20px;
+		
 		a{
 			img{
 				border: 1px solid $border;
