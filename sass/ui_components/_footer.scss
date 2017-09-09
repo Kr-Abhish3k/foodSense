@@ -30,12 +30,13 @@ footer{
 	}
 
 	.social{
-		@include clearfix;
+		
 		position: absolute;
 		top: 15px;
 		right: 0;
 
 		.social_menu{
+			@include clearfix;
 			.menu_item{
 				float: left;
 				a{

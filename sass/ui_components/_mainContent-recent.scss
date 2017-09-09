@@ -1,73 +1,95 @@
-.recent{
-	margin: 20px;
-	@include respond-to(tablet){
-		margin: 12px 10px;
-		@include clearfix;
-	}
-
-	@include respond-to(ipad){
-		@include clearfix;
-		width: 100%;
-		margin: 30px 0 20px;
-	}
-
-
-	.recent_article{
-		@include respond-to(ipad){
-			float: left;
-			//width: 25%;
-			width: 160px;
-			margin-left: 24px;
-
-			&:first-child{
-				margin-left: 0px;
-			}
-		}
-
+.contentBlock{
+	.recent{
+		margin: 20px;
 		@include respond-to(tablet){
-			width: 220px;
-			float: left;
-			margin-bottom: 20px;
-			&:nth-child(even){
-			margin-left: 10px;
-			}
+			margin: 12px 10px;
+			@include clearfix;
+		}
 
-			&:nth-child(odd){
-				margin-right: 10px;
-			}
+		@include respond-to(ipad){
+			@include clearfix;
+			width: 100%;
+			margin: 30px 0 20px;
+		}
+
+		@include respond-to(widescreen){
+			@include clearfix;
+			width: 100%;
+			margin: 30px 0 20px;
+		}
 			
-		}
 
-		
-		a{
-			img{
-				border: 1px solid $border;
-				padding: 10px;
-				width: 100%;
+		.recent_article{
+			@include respond-to(smartphone){
+				padding-bottom: 10px;
 			}
-			&:hover{
-				opacity: 0.8;
-			}
-			h1{
-				margin: 10px 0;
-				@include fontStyle($size16);
-			}
-		}
 
-		p{
-			font-family: $font-featuredElement;
-			line-height: 1.4em;
-			@include font-size($size15);
-			color: $BLACK;
-		}
+			@include respond-to(tablet){
+				width: 220px;
+				float: left;
+				margin-bottom: 20px;
+				&:nth-child(even){
+				margin-left: 10px;
+				}
 
-		.recent_article_MoreInfo{
-			margin-top: 10px;
-			color: $greyText;
-			@include font-size($size14);
+				&:nth-child(odd){
+					margin-right: 10px;
+				}
+				
+			}
+
+			@include respond-to(ipad){
+				float: left;
+				//width: 25%;
+				width: 160px;
+				margin-left: 24px;
+
+				&:first-child{
+					margin-left: 0px;
+				}
+			}
+
+			@include respond-to(widescreen){
+				float: left;
+				width: 22%;
+				margin-left: 26px;
+
+				&:first-child{
+					margin-left: 0px;
+				}
+			}
+
+			
 			a{
-				@include fontStyle($size14);
-				border-bottom: 1px dashed $border;
+				img{
+					border: 1px solid $border;
+					padding: 10px;
+					width: 100%;
+				}
+				&:hover{
+					opacity: 0.8;
+				}
+				h1{
+					margin: 10px 0;
+					@include fontStyle($size16);
+				}
+			}
+
+			p{
+				font-family: $font-featuredElement;
+				line-height: 1.4em;
+				@include font-size($size15);
+				color: $BLACK;
+			}
+
+			.recent_article_MoreInfo{
+				margin-top: 10px;
+				color: $greyText;
+				@include font-size($size14);
+				a{
+					@include fontStyle($size14);
+					border-bottom: 1px dashed $border;
+				}
 			}
 		}
 	}

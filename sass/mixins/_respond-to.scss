@@ -4,7 +4,7 @@
     $device-range-smartphone: 480px;
     $device-range-tablet: 760px;
     $device-range-ipad: 761px;
-    $device-range-laptop: 1025px; 
+    $device-range-widescreen: 1000px; 
 
 
     @if $type == smartphone{  //1px to 480px
@@ -19,12 +19,16 @@
     	}
     }
 
-    @if $type == ipad{ ////761px to 1024px
-    	@media screen and (min-width: $device-range-ipad) and (max-width: $device-range-laptop - 1){
+    @if $type == ipad{ //761px to 999px
+    	@media screen and (min-width: $device-range-ipad) and (max-width: $device-range-widescreen - 1){
     		@content;
     	}
     }
 
-    @if $type == laptop{}
+    @if $type == widescreen{ // >=1000px
+        @media screen and (min-width:$device-range-widescreen){
+            @content;
+        }
+    }
 }
 

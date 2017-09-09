@@ -3,15 +3,21 @@
 }
 
 body{
-	width: 320px;
+	 width: 320px;
+	 //width: 95%;
+	 height: 100%;
+	 margin: 0 auto;
 	@include respond-to(tablet){
 		width: 480px;
 	}
 	 @include respond-to(ipad){
 		width: 712px;
 	} 
-	height: 100%;
-	margin: 0 auto;
+	@include respond-to(widescreen){
+		width: 90%;
+		padding-top: 50px;
+
+	 }
 }
 
 a:hover,

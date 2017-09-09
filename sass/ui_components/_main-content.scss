@@ -1,165 +1,232 @@
-.featured{
-	position: relative;
-	margin-bottom: 50px;
-	width: 100%;
+.contentBlock{
+	@include respond-to(widescreen){
+		padding-left: 50px;
+	}
 
-	.featured_image{
-		img{
-			width: 100%;
-			height: 200px;
-			@include respond-to(ipad){
-				height: 100%;
-			}
+	.featured{
+		position: relative;
+		margin-bottom: 50px;
+		width: 100%;
+		@include respond-to(widescreen){
+			margin-bottom: 80px;
 		}
-		.featured_image_text{
-			position: absolute;
-			top: 164px;
-			font-family: $font-featuredElement;
-			@include respond-to(smartphone){
-				width: 100%;
-			}
-			
-			@include respond-to(tablet){
-				width: 100%;
-			}
 
-			@include respond-to(ipad){
-				text-align: right;
-				right: 0;
-				}
-
-			h1{
-				padding: 10px;
-				font-style: italic;
-				background: rgba(255,255,255,0.5);
-				opacity: 0.8;
-				color: $BLACK;
-		
+		.featured_image{
+			img{
+				width: 100%;
+				height: 200px;
 				@include respond-to(ipad){
-					display: inline-block;
+					height: 100%;
+				}
+
+				@include respond-to(widescreen){
+					height: 450px;
+				}
+
+			}
+			.featured_image_text{
+				position: absolute;
+				top: 164px;
+				font-family: $font-featuredElement;
+				display: inherit;
+				@include respond-to(smartphone){
+					width: 100%;
+				}
+				
+				@include respond-to(tablet){
+					width: 100%;
+				}
+
+				@include respond-to(ipad){
+					text-align: right;
+					right: 0;
+				}
+
+				@include respond-to(widescreen){
+					top: 300px;
+					text-align: right;
+					right: 0;
+				}
+
+				h1{
+					padding: 10px;
+					font-style: italic;
+					background: rgba(255,255,255,0.5);
+					opacity: 0.8;
+					color: $BLACK;
+			
+					@include respond-to(ipad){
+						display: inline-block;
+					}
+
+					@include respond-to(widescreen){
+						display: inline-block;
+					}
+				}
+
+				h2{
+					padding: 10px;
+					font-style: italic;
+					color: $MERCURY;
+					background: $BLACK;
+					@include font-size($size12);
+					@include respond-to(widescreen){
+						@include font-size($size14);
+					}
 				}
 			}
+			.featured_photoCredit{
+				@include font-size($size8);
+				
+				position: absolute;
+				right: 0;
+				bottom: -45px;
 
-			h2{
-				padding: 10px;
-				font-style: italic;
-				color: $MERCURY;
-				background: $BLACK;
-				@include font-size($size12);
+				@include respond-to(ipad){
+					padding: 4px 8px;
+					bottom: 50px;
+					right: 15px;
+					border-radius: 3px;
+					background: rgba(255,255,255,.5);
+				}
+
+				@include respond-to(widescreen){
+					padding: 4px 8px;
+					bottom: 50px;
+					right: 15px;
+					border-radius: 3px;
+					background: rgba(255,255,255,.5);
+				}
 			}
 		}
-		.featured_photoCredit{
-			@include font-size($size8);
-			
-			position: absolute;
-			right: 0;
-			bottom: -40px;
-
+		
+		.featured_nav{
+			display: none;
 			@include respond-to(ipad){
-				padding: 4px 8px;
-				bottom: 50px;
-				right: 15px;
-				border-radius: 3px;
-				background: rgba(255,255,255,.5);
+				display: block;
+				width: 500px;
+				
 			}
-		}
-	}
-	
-	.featured_nav{
-		display: none;
-		@include respond-to(ipad){
-			display: block;
-			
-		}
 
-		.featured_nav_menu{
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			.menu{
-				@include clearfix;
-				.menu_item{
-					float: left;
-					text-align: center;
-					
-					
-					width: 25%;
-					//padding: 20px;		
-					background-color: $navbackground;
-					border-right: 1px solid $navBorder;
-					&:last-child{
-						border-right: none;
-					}
-					@include fontStyle($size16);
-					a{
-						height: 35px;	
-						display: block;
-						padding: 10px 0px;
+			@include respond-to(widescreen){
+				display: block;
+			}
+
+			.featured_nav_menu{
+				position: absolute;
+				//bottom: 0;
+				
+				width: 100%;
+				@include respond-to(ipad){
+					top: 350px;	
+				}
+
+				@include respond-to(widescreen){
+					top: 450px;	
+				}
+
+				.menu{
+					@include clearfix;
+					.menu_item{
+						float: left;
+						text-align: center;	
+						width: 25%;
+						//padding: 20px;		
+						background-color: $navbackground;
+						border-right: 1px solid $navBorder;
+						&:last-child{
+							border-right: none;
+						}
+						@include fontStyle($size16);
+						a{
+							//height: 35px;	
+							display: block;
+							padding: 10px 0px;
+							@include respond-to(widescreen){
+								padding: 20px 0;
+							}
+
+						}
 					}
 				}
 			}
 		}
+
 	}
 
-}
-
-.newsletter{
-	border-top: 1px dashed $border;
-	border-bottom: 1px dashed $border;
-	background-image: url("../images/icon-mailinglist.png");
-	background-repeat: no-repeat;
-	background-size: 35px;
-	background-position: 15px 15px;
-	padding-bottom: 15px;
-	@include respond-to(ipad){
-		@include clearfix;
-		padding-bottom: 0;
-	}
-
-	.newsletter_overview{
-		font-family: $font-featuredElement;
-		line-height: 1.3em;
-		@include font-size($size11);
-		padding: 15px 5px 20px 75px;
-		font-style: italic;
+	.newsletter{
+		border-top: 1px dashed $border;
+		border-bottom: 1px dashed $border;
+		background-image: url("../images/icon-mailinglist.png");
+		background-repeat: no-repeat;
+		background-size: 35px;
+		background-position: 15px 15px;
+		padding-bottom: 15px;
 		@include respond-to(ipad){
-			width: 60%;
-			float: left;
+			@include clearfix;
+			padding-bottom: 0;
 		}
-	}
-	.newsletter_form{
-		@include respond-to(ipad){
-			float: left;
-			padding: 20px 10px;
+		
+		@include respond-to(widescreen){
+			@include clearfix;
+			padding-bottom: 0;
 		}
 
-		.newsletter_mailId{
-			border: 1px solid;
-			border-color: #848484 #c1c1c1 #e1e1e1;
-			@include font-size($size13);
-			padding: 3px 5px;
-			outline: 0;
-			margin-left: 15px;
-			height: 25px;
+		.newsletter_overview{
+			font-family: $font-featuredElement;
+			line-height: 1.3em;
+			@include font-size($size11);
+			padding: 15px 5px 20px 75px;
+			font-style: italic;
+			@include respond-to(ipad){
+				width: 60%;
+				float: left;
+			}
 
-			@include respond-to(tablet){
-				width: 300px;
+			@include respond-to(widescreen){
+				width: 60%;
+				float: left;
+			}
+		}
+		.newsletter_form{
+			@include respond-to(ipad){
+				float: left;
+				padding: 20px 10px;
+			}
+
+			@include respond-to(widescreen){
+				float: left;
+				padding: 20px 10px;
+			}
+
+			.newsletter_mailId{
+				border: 1px solid;
+				border-color: #848484 #c1c1c1 #e1e1e1;
+				@include font-size($size13);
+				padding: 3px 5px;
+				outline: 0;
+				margin-left: 15px;
+				height: 25px;
+
+				@include respond-to(tablet){
+					width: 300px;
+				}
+			}
+
+			.newsletter_subscribe{
+				border: 1px solid;
+				border-color: #ddd #bbb #999;
+				padding: 3px 5px;
+				border-radius: 5px;
+				background: -webkit-gradient(linear, left top, left bottom,color-stop(0, #fff), color-stop(1, #ddd));
+				outline: 0;
+				margin-left: 10px;
+				font-weight: bold;
+				@include font-size($size12);
+				font-family: $font-button;
+				
 			}
 		}
 
-		.newsletter_subscribe{
-			border: 1px solid;
-			border-color: #ddd #bbb #999;
-			padding: 3px 5px;
-			border-radius: 5px;
-			background: -webkit-gradient(linear, left top, left bottom,color-stop(0, #fff), color-stop(1, #ddd));
-			outline: 0;
-			margin-left: 10px;
-			font-weight: bold;
-			@include font-size($size12);
-			font-family: $font-button;
-			
-		}
 	}
-
 }
