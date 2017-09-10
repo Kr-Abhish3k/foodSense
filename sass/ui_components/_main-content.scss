@@ -1,5 +1,5 @@
 .contentBlock{
-	@include respond-to(widescreen){
+	@include respond-to(laptop){
 		padding-left: 50px;
 	}
 
@@ -7,8 +7,8 @@
 		position: relative;
 		margin-bottom: 50px;
 		width: 100%;
-		@include respond-to(widescreen){
-			margin-bottom: 80px;
+		@include respond-to(laptop){
+			margin-bottom: 100px;
 		}
 
 		.featured_image{
@@ -19,7 +19,7 @@
 					height: 100%;
 				}
 
-				@include respond-to(widescreen){
+				@include respond-to(laptop){
 					height: 450px;
 				}
 
@@ -42,7 +42,7 @@
 					right: 0;
 				}
 
-				@include respond-to(widescreen){
+				@include respond-to(laptop){
 					top: 300px;
 					text-align: right;
 					right: 0;
@@ -59,7 +59,7 @@
 						display: inline-block;
 					}
 
-					@include respond-to(widescreen){
+					@include respond-to(laptop){
 						display: inline-block;
 					}
 				}
@@ -70,7 +70,7 @@
 					color: $MERCURY;
 					background: $BLACK;
 					@include font-size($size12);
-					@include respond-to(widescreen){
+					@include respond-to(laptop){
 						@include font-size($size14);
 					}
 				}
@@ -90,7 +90,7 @@
 					background: rgba(255,255,255,.5);
 				}
 
-				@include respond-to(widescreen){
+				@include respond-to(laptop){
 					padding: 4px 8px;
 					bottom: 50px;
 					right: 15px;
@@ -108,7 +108,7 @@
 				
 			}
 
-			@include respond-to(widescreen){
+			@include respond-to(laptop){
 				display: block;
 			}
 
@@ -121,7 +121,7 @@
 					top: 350px;	
 				}
 
-				@include respond-to(widescreen){
+				@include respond-to(laptop){
 					top: 450px;	
 				}
 
@@ -131,18 +131,30 @@
 						float: left;
 						text-align: center;	
 						width: 25%;
-						//padding: 20px;		
+						@include fontStyle($size16);
+						@include respond-to(laptop){
+							text-align: left;
+							padding-left: 35px;
+						}		
 						background-color: $navbackground;
 						border-right: 1px solid $navBorder;
 						&:last-child{
 							border-right: none;
 						}
-						@include fontStyle($size16);
+						
 						a{
 							//height: 35px;	
 							display: block;
 							padding: 10px 0px;
-							@include respond-to(widescreen){
+							.menu_item_desc{
+								display: none;
+								@include respond-to(widescreen){
+									display: block;
+									padding-top: 5px;
+									@include font-size($size11);
+								}
+							}
+							@include respond-to(laptop){
 								padding: 20px 0;
 							}
 
@@ -167,7 +179,7 @@
 			padding-bottom: 0;
 		}
 		
-		@include respond-to(widescreen){
+		@include respond-to(laptop){
 			@include clearfix;
 			padding-bottom: 0;
 		}
@@ -183,7 +195,7 @@
 				float: left;
 			}
 
-			@include respond-to(widescreen){
+			@include respond-to(laptop){
 				width: 60%;
 				float: left;
 			}
@@ -194,7 +206,7 @@
 				padding: 20px 10px;
 			}
 
-			@include respond-to(widescreen){
+			@include respond-to(laptop){
 				float: left;
 				padding: 20px 10px;
 			}

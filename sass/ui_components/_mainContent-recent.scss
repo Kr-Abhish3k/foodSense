@@ -12,7 +12,7 @@
 			margin: 30px 0 20px;
 		}
 
-		@include respond-to(widescreen){
+		@include respond-to(laptop){
 			@include clearfix;
 			width: 100%;
 			margin: 30px 0 20px;
@@ -49,7 +49,7 @@
 				}
 			}
 
-			@include respond-to(widescreen){
+			@include respond-to(laptop){
 				float: left;
 				width: 22%;
 				margin-left: 26px;

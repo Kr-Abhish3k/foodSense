@@ -13,7 +13,7 @@ body{
 	 @include respond-to(ipad){
 		width: 712px;
 	} 
-	@include respond-to(widescreen){
+	@include respond-to(laptop){
 		width: 90%;
 		padding-top: 50px;
 

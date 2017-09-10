@@ -4,7 +4,7 @@
 	height: 100%;
 }
 
-@include respond-to(widescreen){
+@include respond-to(laptop){
  	.pageWrapper{
  		.wrap{
 			@include clearfix;	
